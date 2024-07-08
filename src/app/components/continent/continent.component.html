@@ -1,0 +1,17 @@
+@if(continents | async ; as continents) 
+{
+  @if(continents.length > 0)
+  {
+    <h1>List of continents</h1>
+    <ol>
+      @for (item of continents; track $index) 
+      {
+        <li>{{item.nameContinent}}</li>
+      }
+    </ol>
+  }
+  @else 
+  {
+    <p>No continents found ...</p>
+  }
+}

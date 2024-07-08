@@ -1,17 +1,8 @@
-@if(continents | async ; as continents) 
-{
-  @if(continents.length > 0)
-  {
-    <h1>List of continents</h1>
-    <ol>
-      @for (item of continents; track $index) 
-      {
-        <li>{{item.nameContinent}}</li>
-      }
-    </ol>
-  }
-  @else 
-  {
-    <p>No continents found ...</p>
-  }
-}
+<main>
+  <header class="brand-name">
+    <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true" />
+  </header>
+  <section class="content">
+    <app-continent></app-continent>
+  </section>
+</main>
