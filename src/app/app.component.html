@@ -2,7 +2,9 @@
   <header class="brand-name">
     <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true" />
   </header>
-  <section class="content">
-    <app-continent></app-continent>
-  </section>
+  <nav>
+    <a [routerLink]="['/']">Home</a> / 
+    <a [routerLink]="['/continents']">Continents</a>
+  </nav>
+  <router-outlet/>
 </main>
