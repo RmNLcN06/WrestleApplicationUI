@@ -1,7 +1,9 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component} from '@angular/core';
 import { AsyncPipe } from '@angular/common';
-import { ContinentComponent } from './components/continent/continent.component';
+import { ContinentListComponent } from './components/continent-list/continent-list.component';
+import { ContinentDetailsComponent } from './components/continent-details/continent-details.component';
+import { ContinentFormComponent } from './components/continent-form/continent-form.component';
 import { RouterModule, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -14,7 +16,9 @@ import { RouterModule, RouterLink, RouterOutlet } from '@angular/router';
     RouterOutlet, 
     HttpClientModule, 
     AsyncPipe, 
-    ContinentComponent
+    ContinentListComponent,
+    ContinentDetailsComponent,
+    ContinentFormComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
