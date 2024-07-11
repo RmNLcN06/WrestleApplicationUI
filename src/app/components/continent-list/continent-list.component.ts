@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ContinentService } from '../../services/continent.service';
 import { Continent } from '../../models/continent';
+import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-continent-list',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, CommonModule],
   templateUrl: './continent-list.component.html',
   styleUrl: './continent-list.component.css'
 })

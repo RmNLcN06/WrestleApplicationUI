@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ContinentService } from '../../services/continent.service';
 import { Continent } from '../../models/continent';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-continent-details',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, CommonModule],
   templateUrl: './continent-details.component.html',
   styleUrl: './continent-details.component.css'
 })

@@ -1,1 +1,21 @@
-<p>continent-list works!</p>
+<div class="container">
+    <h2>List of continents</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let continent of continents">
+                <td>{{ continent.nameContinent }}</td>
+                <td>
+                    <a [routerLink]="['/continents', continent.idContinent]" class="btn btn-primary">Details</a>
+                    <a [routerLink]="['/edit-continent', continent.idContinent]" class="btn btn-warning">Update</a>
+                    <button class="btn btn-danger" (click)="deleteContinent(continent.idContinent)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a [routerLink]="['/add-continent']" class="btn btn-success">Add a continent</a>
+</div>

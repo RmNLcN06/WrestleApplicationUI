@@ -1,1 +1,10 @@
-<p>continent-details works!</p>
+<div class="container" *ngIf="continent">
+    <h2>Continent Details</h2>
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text"> {{ continent.nameContinent }} </p>
+            <a [routerLink]="['/continents/edit-continent', continent.idContinent]" class="btn btn-warning">Update</a>
+            <a [routerLink]="['/continents']" class="btn btn-secondary">Return to Continent's List</a>
+        </div>
+    </div>
+</div>

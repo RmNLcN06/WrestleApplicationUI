@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ContinentService } from '../../services/continent.service';
 import { Continent } from '../../models/continent';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-continent-form',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, CommonModule, ReactiveFormsModule],
   templateUrl: './continent-form.component.html',
   styleUrl: './continent-form.component.css'
 })

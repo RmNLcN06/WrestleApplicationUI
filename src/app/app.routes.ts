@@ -3,16 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContinentListComponent } from './components/continent-list/continent-list.component';
 import { ContinentDetailsComponent } from './components/continent-details/continent-details.component';
 import { ContinentFormComponent } from './components/continent-form/continent-form.component';
+import { AppComponent } from './app.component';
 
 
 export const routes: Routes = [
     {
-        path: '',
+        path: 'continents',
         title: 'Continents Page',
         component: ContinentListComponent,
     },
     {
-        path: 'continent/:id',
+        path: 'continents/:id',
         title: 'Continent Page',
         component: ContinentDetailsComponent,
     },
